@@ -45,6 +45,10 @@
             //Anroppar biggestNumber 2 ggr, och använder värdet som parameter
             summa = biggestNumber(34, biggestNumber(23, 35) );
             Console.WriteLine("Största nummret är {0}", summa);
+
+            Console.WriteLine("Summan av inget är {0}", add() );
+            Console.WriteLine("Summan av 5 är {0}", add(5) );
+            Console.WriteLine("Summan av 5 och 6 är {0}", add(5, 6) );
         }
 
         //Funktion för att skriva ut meddelande till Console
@@ -80,7 +84,7 @@
         }
 
         //Funktion add som tar in 2 parametrar och returnerar summa
-        public static int add(int tal1, int tal2)
+        public static int add(int tal1 = 0, int tal2 = 0)
         {
             return tal1 + tal2;
         }
@@ -91,6 +95,18 @@
             //Jämnför tal1 och tal2, returnerar det största talet
             if (tal1 > tal2) return tal1;
             else return tal2;
+        }
+
+        //Funktion biggestNumber, returnerar parametern
+        public static int biggestNumber(int tal1)
+        {
+            return tal1;
+        }
+
+        //Funktion biggestNumber, returnerar parametern
+        public static string biggestNumber(string tal1)
+        {
+            return tal1;
         }
     }
 }
