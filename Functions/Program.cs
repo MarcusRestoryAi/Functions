@@ -14,6 +14,12 @@
             oneOrTwo(1);
             oneOrTwo(2);
             oneOrTwo(3);
+
+            //Funktion sayHey
+            string name = "Anders";
+            string message = sayHey(name);
+
+            Console.WriteLine(message);
         }
 
         //Funktion för att skriva ut meddelande till Console
@@ -33,6 +39,13 @@
             {
                 Console.WriteLine("Nummret är 2");
             }
+        }
+
+        //Funktion sayHey som skall returnera ett hälsningsmeddelande
+        public static string sayHey(string name)
+        {
+            //Returnera ett hälsningsmeddelande
+            return "Hejsan " + name;
         }
 
     }
