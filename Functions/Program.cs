@@ -45,10 +45,17 @@
             //Anroppar biggestNumber 2 ggr, och använder värdet som parameter
             summa = biggestNumber(34, biggestNumber(23, 35) );
             Console.WriteLine("Största nummret är {0}", summa);
+            
+            //Anroppar biggestNumber 1 gång med 1 parameter. Får det dubbla tillbaka, pga myFunc1
+            summa = biggestNumber(24);
+            Console.WriteLine("Det dubbla numret av 24 är {0}", summa);
 
             Console.WriteLine("Summan av inget är {0}", add() );
             Console.WriteLine("Summan av 5 är {0}", add(5) );
             Console.WriteLine("Summan av 5 och 6 är {0}", add(5, 6) );
+
+            //Anropar myFunc1
+            Console.WriteLine( myFunc1(10) );
         }
 
         //Funktion för att skriva ut meddelande till Console
@@ -100,13 +107,26 @@
         //Funktion biggestNumber, returnerar parametern
         public static int biggestNumber(int tal1)
         {
-            return tal1;
+            return myFunc1(tal1);
         }
 
         //Funktion biggestNumber, returnerar parametern
         public static string biggestNumber(string tal1)
         {
             return tal1;
+        }
+
+        //2st funktioner, där den ena funktionen anroppar den andra.
+        public static int myFunc1(int value)
+        {
+            //Anropa myFunc2 och returnera värdet x
+            int x = myFunc2(value);
+            return x;
+        }
+        public static int myFunc2(int value)
+        {
+            //Returnera value multipliserat med 2
+            return value * 2;
         }
     }
 }
