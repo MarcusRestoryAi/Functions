@@ -6,6 +6,10 @@
 
         static void Main(string[] args)
         {
+            //Ny kod skapad av Marcus
+            Console.WriteLine("Detta är min kod");
+            //Avslut av ny Kod av Marcus
+
             //FUnktion myFunction
             Console.WriteLine("Innan funktionen");
             myFunction();
