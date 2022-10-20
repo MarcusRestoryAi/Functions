@@ -8,5 +8,7 @@ namespace Functions
 {
     internal class NyClass
     {
+        //LoginKod
+        //Här är koden för att kunna logga in på hemsidan
     }
 }
